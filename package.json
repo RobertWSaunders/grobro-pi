@@ -1,0 +1,26 @@
+{
+  "name": "grobro-pi",
+  "version": "1.0.0",
+  "description": "Raspberry Pi server to relay serial data to Grobro server! :helicopter: :rocket:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertWSaunders/grobro-pi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertWSaunders/grobro-pi/issues"
+  },
+  "homepage": "https://github.com/RobertWSaunders/grobro-pi#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io-client": "^2.1.0"
+  },
+  "devDependencies": {
+    "serialport": "^6.1.1"
+  }
+}
