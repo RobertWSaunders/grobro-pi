@@ -23,7 +23,7 @@ const socketActions = {
 	NEW_SENSOR_DATA: 'new_sensor_data'
 };
 
-module.exports = (logger) => {
+module.exports = (logger, serial) => {
 
 	const socket = io(process.env.SOCKET_HOST, {
 		path: '/socket',
@@ -69,25 +69,25 @@ module.exports = (logger) => {
 	socket.on(socketEvents.SET_FLOWERING_CYCLE, () => {
 		logger.info('Set flowering cycle event received!');
 
-		// tell arduino to change cycle to flowering
+		serial.write('F');
 	});
 
 	socket.on(socketEvents.SET_VEGETATIVE_CYCLE, () => {
 		logger.info('Set vegetative cycle event received!');
 
-		// tell arduino to change cycle to vegetative
+		serial.write('V');
 	});
 
 	socket.on(socketEvents.GROW_LIGHT_ON, () => {
 		logger.info('Set grow light on event received!');
 
-		// tell arduino to turn on light
+		serial.write('G');
 	});
 
 	socket.on(socketEvents.GROW_LIGHT_OFF, () => {
 		logger.info('Set grow light off event received!');
 
-		// tell arduino to turn off light
+		serial.write('g');
 	});
 
 	return {
