@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/RobertWSaunders/grobro-pi#readme",
   "dependencies": {
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
-    "socket.io-client": "^2.1.0"
-  },
-  "devDependencies": {
+    "socket.io-client": "^2.1.0",
+    "winston": "^3.0.0-rc1",
     "serialport": "^6.1.1"
   }
 }
